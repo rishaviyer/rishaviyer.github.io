@@ -1,96 +1,458 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Hello WebXR!</title>
+	<title></title>
+	<meta content="summary_large_image" name="twitter:card" />
+	<meta content="website" property="og:type" />
+	<meta content="" property="og:description" />
+	<meta content="https://cb3c3lrxbe.preview-postedstuff.com/V2-ZuN08-lUhD-BWrl-ZU6Gd/" property="og:url" />
+	<meta content="https://pro-bee-beepro-thumbnail.getbee.io/messages/1036887/1021974/1972676/9725959_large.jpg" property="og:image" />
+	<meta content="" property="og:title" />
+	<meta content="" name="description" />
+	<meta charset="utf-8" />
+	<meta content="width=device-width" name="viewport" />
+	<style>
+		.bee-row,
+		.bee-row-content {
+			position: relative
+		}
 
-  <!-- three.js -->
-  <script src="https://unpkg.com/three@0.126.0/build/three.js"></script>
+		.bee-row-1,
+		.bee-row-10,
+		.bee-row-11,
+		.bee-row-2,
+		.bee-row-4,
+		.bee-row-6,
+		.bee-row-8 {
+			background-position: center top;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-1,
+		.bee-row-10,
+		.bee-row-11,
+		.bee-row-12,
+		.bee-row-13,
+		.bee-row-2,
+		.bee-row-3,
+		.bee-row-4,
+		.bee-row-5,
+		.bee-row-6,
+		.bee-row-7,
+		.bee-row-8,
+		.bee-row-9 {
+			background-repeat: no-repeat
+		}
+
+		body {
+			background-color: #322d23;
+			color: #000;
+			font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace
+		}
+
+		a {
+			color: #f1f1e9
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		h1,
+		h2,
+		p {
+			margin: 0
+		}
+
+		.bee-row-content {
+			max-width: 480px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.bee-row-content .bee-col-w4 {
+			flex-basis: 33%
+		}
+
+		.bee-row-content .bee-col-w8 {
+			flex-basis: 67%
+		}
+
+		.bee-row-content .bee-col-w12 {
+			flex-basis: 100%
+		}
+
+		.bee-icon .bee-icon-label-right a {
+			text-decoration: none
+		}
+
+		.bee-divider,
+		.bee-image {
+			overflow: auto
+		}
+
+		.bee-divider .center,
+		.bee-image .bee-center {
+			margin: 0 auto
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-1,
+		.bee-row-10 .bee-col-2 .bee-block-1,
+		.bee-row-3 .bee-col-1 .bee-block-1,
+		.bee-row-4 .bee-col-2 .bee-block-1,
+		.bee-row-6 .bee-col-2 .bee-block-1,
+		.bee-row-8 .bee-col-2 .bee-block-1 {
+			width: 100%
+		}
+
+		.bee-icon {
+			display: inline-block;
+			vertical-align: middle
+		}
+
+		.bee-icon .bee-content {
+			display: flex;
+			align-items: center
+		}
+
+		.bee-image img {
+			display: block;
+			width: 100%
+		}
+
+		.bee-text {
+			overflow-wrap: anywhere
+		}
+
+		@media (max-width:500px) {
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+		}
+
+		.bee-row-1 {
+			background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/bg_section1_1.png')
+		}
+
+		.bee-row-1 .bee-row-content,
+		.bee-row-10 .bee-row-content,
+		.bee-row-11 .bee-row-content,
+		.bee-row-12 .bee-row-content,
+		.bee-row-13 .bee-row-content,
+		.bee-row-2 .bee-row-content,
+		.bee-row-3 .bee-row-content,
+		.bee-row-4 .bee-row-content,
+		.bee-row-5 .bee-row-content,
+		.bee-row-6 .bee-row-content,
+		.bee-row-7 .bee-row-content,
+		.bee-row-8 .bee-row-content,
+		.bee-row-9 .bee-row-content {
+			background-repeat: no-repeat;
+			color: #000
+		}
+
+		.bee-row-1 .bee-col-1 {
+			padding-bottom: 5px
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2,
+		.bee-row-10 .bee-col-1 .bee-block-1,
+		.bee-row-11 .bee-col-1 .bee-block-1,
+		.bee-row-2 .bee-col-1 .bee-block-1,
+		.bee-row-2 .bee-col-1 .bee-block-3,
+		.bee-row-3 .bee-col-1 .bee-block-2,
+		.bee-row-4 .bee-col-1 .bee-block-1,
+		.bee-row-6 .bee-col-1 .bee-block-1,
+		.bee-row-8 .bee-col-1 .bee-block-1 {
+			padding: 10px
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-3 {
+			color: #000;
+			font-family: inherit;
+			font-size: 14px;
+			text-align: center
+		}
+
+		.bee-row-2 {
+			background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/bg_header.png')
+		}
+
+		.bee-row-10 .bee-col-1,
+		.bee-row-10 .bee-col-2,
+		.bee-row-13 .bee-col-1,
+		.bee-row-2 .bee-col-1,
+		.bee-row-3 .bee-col-1,
+		.bee-row-4 .bee-col-1,
+		.bee-row-4 .bee-col-2,
+		.bee-row-5 .bee-col-1,
+		.bee-row-6 .bee-col-1,
+		.bee-row-6 .bee-col-2,
+		.bee-row-7 .bee-col-1,
+		.bee-row-8 .bee-col-1,
+		.bee-row-8 .bee-col-2,
+		.bee-row-9 .bee-col-1 {
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-2 {
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-10,
+		.bee-row-4,
+		.bee-row-6,
+		.bee-row-8 {
+			background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/bg_links.png')
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-2,
+		.bee-row-4 .bee-col-1 .bee-block-2,
+		.bee-row-6 .bee-col-1 .bee-block-2,
+		.bee-row-8 .bee-col-1 .bee-block-2 {
+			padding-left: 15px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-3,
+		.bee-row-4 .bee-col-1 .bee-block-3,
+		.bee-row-6 .bee-col-1 .bee-block-3,
+		.bee-row-8 .bee-col-1 .bee-block-3 {
+			padding: 10px 10px 10px 15px
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-3 .bee-icon-image,
+		.bee-row-5 .bee-col-1 .bee-block-1,
+		.bee-row-7 .bee-col-1 .bee-block-1,
+		.bee-row-9 .bee-col-1 .bee-block-1 {
+			padding: 5px
+		}
+
+		.bee-row-11 {
+			background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/bg_last_part.png')
+		}
+
+		.bee-row-11 .bee-col-1 {
+			padding-top: 5px
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-1 {
+			color: #9d9d9d;
+			font-family: inherit;
+			font-size: 15px;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			text-align: center
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-3 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-13 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
+			margin-left: 0
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-3 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-1 .bee-icon-image {
+			padding: 5px 6px 5px 5px
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+	</style>
 </head>
+
 <body>
-
-<!-- Starting an immersive WebXR session requires user interaction.
-    We start this one with a simple button. -->
-<button onclick="activateXR()">Start Hello WebXR</button>
-<script>
-async function activateXR() {
-  // Add a canvas element and initialize a WebGL context that is compatible with WebXR.
-  const canvas = document.createElement("canvas");
-  document.body.appendChild(canvas);
-  const gl = canvas.getContext("webgl", {xrCompatible: true});
-
-  const scene = new THREE.Scene();
-
-// The cube will have a different color on each side.
-const materials = [
-  new THREE.MeshBasicMaterial({color: 0xff0000}),
-  new THREE.MeshBasicMaterial({color: 0x0000ff}),
-  new THREE.MeshBasicMaterial({color: 0x00ff00}),
-  new THREE.MeshBasicMaterial({color: 0xff00ff}),
-  new THREE.MeshBasicMaterial({color: 0x00ffff}),
-  new THREE.MeshBasicMaterial({color: 0xffff00})
-];
-
-// Create the cube and add it to the demo scene.
-const cube = new THREE.Mesh(new THREE.BoxBufferGeometry(0.2, 0.2, 0.2), materials);
-cube.position.set(1, 1, 1);
-scene.add(cube);
-
-// Set up the WebGLRenderer, which handles rendering to the session's base layer.
-const renderer = new THREE.WebGLRenderer({
-  alpha: true,
-  preserveDrawingBuffer: true,
-  canvas: canvas,
-  context: gl
-});
-renderer.autoClear = false;
-
-// The API directly updates the camera matrices.
-// Disable matrix auto updates so three.js doesn't attempt
-// to handle the matrices independently.
-const camera = new THREE.PerspectiveCamera();
-camera.matrixAutoUpdate = false;
-// Initialize a WebXR session using "immersive-ar".
-const session = await navigator.xr.requestSession("immersive-ar");
-session.updateRenderState({
-  baseLayer: new XRWebGLLayer(session, gl)
-});
-
-// A 'local' reference space has a native origin that is located
-// near the viewer's position at the time the session was created.
-const referenceSpace = await session.requestReferenceSpace('local');
-
-// Create a render loop that allows us to draw on the AR view.
-const onXRFrame = (time, frame) => {
-  // Queue up the next draw request.
-  session.requestAnimationFrame(onXRFrame);
-
-  // Bind the graphics framebuffer to the baseLayer's framebuffer
-  gl.bindFramebuffer(gl.FRAMEBUFFER, session.renderState.baseLayer.framebuffer)
-
-  // Retrieve the pose of the device.
-  // XRFrame.getViewerPose can return null while the session attempts to establish tracking.
-  const pose = frame.getViewerPose(referenceSpace);
-  if (pose) {
-    // In mobile AR, we only have one view.
-    const view = pose.views[0];
-
-    const viewport = session.renderState.baseLayer.getViewport(view);
-    renderer.setSize(viewport.width, viewport.height)
-
-    // Use the view's transform matrix and projection matrix to configure the THREE.camera.
-    camera.matrix.fromArray(view.transform.matrix)
-    camera.projectionMatrix.fromArray(view.projectionMatrix);
-    camera.updateMatrixWorld(true);
-
-    // Render the scene with THREE.WebGLRenderer.
-    renderer.render(scene, camera)
-  }
-}
-session.requestAnimationFrame(onXRFrame);
-}
-</script>
+	<div class="bee-page-container">
+		<div class="bee-row bee-row-1">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-image"><img alt="Header Line" class="bee-center bee-fixedwidth" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/header_line.png" style="max-width:264px;" /></div>
+					<div class="bee-block bee-block-2 bee-divider">
+						<div class="spacer" style="height:15px;"></div>
+					</div>
+					<div class="bee-block bee-block-3 bee-icons">
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="64px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/white_line.png" width="auto" /></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-2">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:15px;"></div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h1 style="color:#f1f1e9;direction:ltr;font-family:'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;font-size:37px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:center;margin-top:0;margin-bottom:0;"><strong>Jenni's Photography</strong> </h1>
+					</div>
+					<div class="bee-block bee-block-3 bee-divider">
+						<div class="spacer" style="height:0px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-3">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-image"><img alt="Influencer" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/influencer.png" style="max-width:384px;" /></div>
+					<div class="bee-block bee-block-2 bee-divider">
+						<div class="spacer" style="height:20px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-4">
+			<div class="bee-row-content no_stack">
+				<div class="bee-col bee-col-1 bee-col-w8">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:0px;"></div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h2 style="color:#f1f1e9;direction:ltr;font-family:'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;font-size:22px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><a href="http://www.example.com" rel="noopener" style="text-decoration: none; color: #f1f1e9;" target="_blank"><strong>Portfolio / Events</strong></a> </h2>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: inherit; color: #f1f1e9;">
+							<p style="font-size: 14px; line-height: 21px;"><a href="http://www.example.com" rel="noopener" style="text-decoration: none; color: #f1f1e9;" target="_blank">Lorem ipsum dolor.</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><a href="www.example.com" target="_self"><img alt="Portfolio" class="bee-center bee-fixedwidth" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/Asset_5photography.png" style="max-width:128px;" /></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-5">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:0px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-6">
+			<div class="bee-row-content no_stack">
+				<div class="bee-col bee-col-1 bee-col-w8">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:0px;"></div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h2 style="color:#f1f1e9;direction:ltr;font-family:'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;font-size:22px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><a href="http://www.example.com" rel="noopener" style="text-decoration: none; color: #f1f1e9;" target="_blank"><strong>Instagram</strong></a> </h2>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: inherit; color: #f1f1e9;">
+							<p style="font-size: 14px; line-height: 21px;"><a href="http://www.example.com" rel="noopener" style="text-decoration: none; color: #f1f1e9;" target="_blank">Lorem ipsum dolor.</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><a href="www.example.com" target="_self"><img alt="Instagram" class="bee-center bee-fixedwidth" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/instagram_2.png" style="max-width:128px;" /></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-7">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:0px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-8">
+			<div class="bee-row-content no_stack">
+				<div class="bee-col bee-col-1 bee-col-w8">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:0px;"></div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h2 style="color:#f1f1e9;direction:ltr;font-family:'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;font-size:22px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><a href="http://www.example.com" rel="noopener" style="text-decoration: none; color: #f1f1e9;" target="_blank"><strong>TikTok</strong></a><br /> </h2>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: inherit; color: #f1f1e9;">
+							<p style="font-size: 14px; line-height: 21px;"><a href="http://www.example.com" rel="noopener" style="text-decoration: none; color: #f1f1e9;" target="_blank">Lorem ipsum dolor.</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><a href="www.example.com" target="_self"><img alt="Tik Tok" class="bee-center bee-fixedwidth" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/Tik_Tok.png" style="max-width:128px;" /></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-9">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:0px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-10">
+			<div class="bee-row-content no_stack">
+				<div class="bee-col bee-col-1 bee-col-w8">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:0px;"></div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h2 style="color:#f1f1e9;direction:ltr;font-family:'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;font-size:22px;font-weight:normal;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><a href="http://www.example.com" rel="noopener" style="text-decoration: none; color: #f1f1e9;" target="_blank"><strong>Twitter</strong></a><br /> </h2>
+					</div>
+					<div class="bee-block bee-block-3 bee-text">
+						<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: inherit; color: #f1f1e9;">
+							<p style="font-size: 14px; line-height: 21px;"><a href="http://www.example.com" rel="noopener" style="text-decoration: none; color: #f1f1e9;" target="_blank">Lorem ipsum dolor.</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><a href="www.example.com" target="_self"><img alt="Twitter" class="bee-center bee-fixedwidth" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4751/Twitter.png" style="max-width:128px;" /></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-11">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:85px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-12">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="center bee-separator" style="border-top:1px solid #BBBBBB;width:100%;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-13">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-icons" id="beepro-locked-footer">
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-content">
+								<div class="bee-icon-image"><a href="https://www.designedwithbee.com/?utm_source=editor&amp;utm_medium=bee_pro&amp;utm_campaign=free_footer_link" target="_blank" title="Designed with BEE"><img alt="Designed with BEE" height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/assets/bee.png" width="auto" /></a></div>
+								<div class="bee-icon-label bee-icon-label-right"><a href="https://www.designedwithbee.com/?utm_source=editor&amp;utm_medium=bee_pro&amp;utm_campaign=free_footer_link" target="_blank" title="Designed with BEE">Designed with BEE</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>
